@@ -14,4 +14,4 @@ PlayerPerfsManager - Saves values with SetInt, SetFloat, and SetString. Loads th
 1. Open the project in unity 6.
 2. Load the SampleScene and Press Play
 3. Click Load Score to increase the values. They update per click. 
-4. 
+4. Stop to exit the game scene and enter again. You will notice that the values stay persistent until you reset them using the reset button.
