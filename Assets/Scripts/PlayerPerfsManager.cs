@@ -28,6 +28,21 @@ public class PlayerPrefsManager : MonoBehaviour
 
         UpdateDisplay(score, 0.75f, "Donald");
     }
+    public void ResetData()
+    {
+        PlayerPrefs.DeleteKey("Score");
+        PlayerPrefs.DeleteKey("Volume");
+        PlayerPrefs.DeleteKey("PlayerName");
+        PlayerPrefs.Save();
+
+        score = 0;
+
+        UpdateDisplay(
+            PlayerPrefs.GetInt("Score", 0),
+            PlayerPrefs.GetFloat("Volume", 1.0f),
+            PlayerPrefs.GetString("PlayerName", "Guest")
+        );
+    }
 
      void UpdateDisplay(int s, float v, string n)
     {
